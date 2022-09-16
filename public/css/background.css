@@ -1,0 +1,62 @@
+body {
+  padding-top: 60px;
+  background: grey;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-bottom: 40px !important;
+}
+
+.boxes {
+  display: flex;
+  flex: 1 1 0px;
+  align-items: center;
+  justify-content: space-around;
+  height: 100;
+}
+
+.card {
+  background-color: lightgrey;
+}
+
+.text {
+  display: flex;
+  flex: 1 1 0px;
+  align-items: center;
+  justify-content: space-around;
+  height: 30vh;
+}
+
+.chart {
+  background-color: lightgrey;
+  border-radius: 50px;
+}
+
+.chart-container {
+  background-color: lightgrey;
+  border-radius: 50px;
+}
+
+.album-img {
+  position: relative;
+}
+
+.bottom-left {
+  position: absolute;
+  display: flex;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 11px;
+}
