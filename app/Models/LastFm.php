@@ -44,7 +44,7 @@ class LastFm {
                         $songGenre = $temp["tags"][0]["name"];
                         }
                     }
-                    catch(Exception $e) {
+                    catch(NoResultsException $e) {
                         $songGenre = 'null';
                     }
                     ${"song$songName"} = new Song($songId, $songName, $songAlbum, $songArtist, $playedAt, $songUrl, $songImage, $songGenre);
