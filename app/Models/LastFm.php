@@ -42,7 +42,7 @@ class LastFm {
                     $temp = $this->trackApi->getTopTags($tagSearch);
                     }
                     catch (\Throwable $e){
-                        return null;
+                        $temp = null;
                     }
                     if ($temp !== null){
                         $songGenre = $temp["tags"][0]["name"];
