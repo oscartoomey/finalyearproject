@@ -3,9 +3,9 @@
 <h1> Sign into services to use analysis: </h1>
 
 <div class="boxes">
-    <a class="btn btn-outline" href="/project/public/signin"> <img src = img/spotify.png alt="logo" height=100> </a>
-    <a class="btn btn-outline" href="/project/public/lastfm"> <img src = img/lastfm.png alt="logo" height=100> </a>
-    <a class="btn btn-outline" href="/project/public/stravaSignIn"> <img src = img/strava.png alt="logo" height=100></a>
+    <a class="btn btn-outline" href="/signin"> <img src = img/spotify.png alt="logo" height=100> </a>
+    <a class="btn btn-outline" href="/lastfm"> <img src = img/lastfm.png alt="logo" height=100> </a>
+    <a class="btn btn-outline" href="/stravaSignIn"> <img src = img/strava.png alt="logo" height=100></a>
 </div>
 
 <h1> Activity Analysis: </h1>
