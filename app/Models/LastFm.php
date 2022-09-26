@@ -38,11 +38,13 @@ class LastFm {
                     $songUrl = $song["url"];
                     $songImage = $song["images"]["large"];
                     $tagSearch = ['artist' => $songArtist, 'track' => $songName];
-                    $temp = $this->trackApi->getTopTags($tagSearch);
-                    if ($temp !== null){
+                    try{
+                        $temp = $this->trackApi->getTopTags($tagSearch);
+                        if ($temp !== null){
                         $songGenre = $temp["tags"][0]["name"];
+                        }
                     }
-                    else {
+                    catch(Exception $e) {
                         $songGenre = 'null';
                     }
                     ${"song$songName"} = new Song($songId, $songName, $songAlbum, $songArtist, $playedAt, $songUrl, $songImage, $songGenre);
