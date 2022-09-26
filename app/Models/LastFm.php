@@ -41,7 +41,7 @@ class LastFm {
                     try{
                     $temp = $this->trackApi->getTopTags($tagSearch);
                     }
-                    catch (\NoResultsException $e){
+                    catch (\Throwable $e){
                         return null;
                     }
                     if ($temp !== null){
