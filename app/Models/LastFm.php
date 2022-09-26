@@ -38,7 +38,12 @@ class LastFm {
                     $songUrl = $song["url"];
                     $songImage = $song["images"]["large"];
                     $tagSearch = ['artist' => $songArtist, 'track' => $songName];
+                    try{
                     $temp = $this->trackApi->getTopTags($tagSearch);
+                    }
+                    catch (\NoResultsException $e){
+                        return null;
+                    }
                     if ($temp !== null){
                         $songGenre = $temp["tags"][0]["name"];
                     }
