@@ -40,13 +40,13 @@ class LastFm {
                     $tagSearch = ['artist' => $songArtist, 'track' => $songName];
                     try{
                         $temp = $this->trackApi->getTopTags($tagSearch);
-                        if ($temp !== null){
-                        $songGenre = $temp["tags"][0]["name"];
-                        }
                     }
                     catch(NoResultsException $e) {
                         $songGenre = 'null';
                     }
+                    if ($temp !== null){
+                        $songGenre = $temp["tags"][0]["name"];
+                        }
                     ${"song$songName"} = new Song($songId, $songName, $songAlbum, $songArtist, $playedAt, $songUrl, $songImage, $songGenre);
                     $trackId = $this->searchSpotify($songName);
                     if (isset($trackId)){
